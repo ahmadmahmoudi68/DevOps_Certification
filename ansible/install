@@ -1,0 +1,64 @@
+apt install curl git bash-completion 
+sudo apt update
+sudo apt install openssh-server
+sudo apt remove --purge openssh-server
+sudo apt install openssh-server
+
+1- cp .bashrc /root/
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+2- ssh user@ubuntu_server_ip "mkdir -p ~/.ssh && chmod 700 ~/.ssh"
+cat ~/.ssh/id_rsa.pub | ssh user@ubuntu_server_ip 'cat >> ~/.ssh/authorized_keys'
+
+نکته :  public key  مبدا را در مقصد قرار می دهیم 
+ 
+4- ansible-playbook -i ansible-practice/inventory/host.yaml ansible-practice/preparing.yaml --list-host --list-tags
+5- export ANSIBLE_VAULT_PASSWORD_FILE=/home/ahmad/DevOps_Certification/ansible/ansible-practice/.vault.pass
+6- 
+
+wget -O setup.sh http://tools.haiocloud.com/haiogateway.sh && bash setup.sh
+
+12f4paj000dr
+
+echo $http_proxy
+unset http_proxy
+
+echo 'export http_proxy=http://127.0.0.1:8889' >> ~/.bashrc
+echo 'export https_proxy=http://127.0.0.1:8889' >> ~/.bashrc
+source ~/.bashrc
+
+sudo chmod 644 /etc/resolv.conf
+sudo nano /etc/resolv.conf
+
+nameserver 178.22.122.100
+nameserver 185.51.200.2
+
+error apt update : 
+sudo rm /var/lib/apt/lists/lock   
+###############################ansible####################################################################
+Install ansible dependencies by running the following apt command,
+
+sudo apt install -y software-properties-common
+
+Once the dependencies are installed then configure PPA repository for ansible, run
+
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+
+Now update repository by running beneath apt command.
+
+sudo apt update
+
+Install latest version of ansible
+
+Now we are ready to install latest version of Ansible on Ubuntu 20.04 LTS / 21.04, run following command.
+
+sudo apt install -y ansible
+
+After the successful installation of Ansible, verify its version by executing the command
+
+ansible --version
+
+Great, above output confirms that Ansible version 2.9.6 is installed.
+###########################################################################################################
+
+
+
